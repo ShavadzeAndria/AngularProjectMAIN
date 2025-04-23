@@ -1,0 +1,21 @@
+footer {
+    background-color:rgb(0, 37, 78); 
+    max-width: 100%;
+    color: #fff; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 14px; 
+    font-family: Arial, sans-serif; 
+    justify-content: center;
+}
+
+footer a {
+    color: #020202; 
+    text-decoration: none;
+    margin: 0 5px; 
+}
+
+footer a:hover {
+    text-decoration: underline; 
+    color: #1a1d1a; 
+}

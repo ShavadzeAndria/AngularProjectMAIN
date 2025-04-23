@@ -1,0 +1,9 @@
+<main>
+    <h1>Menu</h1>
+    <div class="card" *ngFor="let menu of menuArr">
+        <img [src]="menu.product?.image" alt="">
+        <p class="price">{{menu.product?.price}}</p>
+        <p>{{menu.product?.name}}</p>
+        <p>{{menu.product?.spiciness}}</p>
+    </div>
+</main>

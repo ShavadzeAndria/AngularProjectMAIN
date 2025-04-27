@@ -1,0 +1,29 @@
+.sec1{
+    display: flex;
+    justify-content: space-around; 
+}
+.text{
+    max-width: 50%;
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+.img{
+    max-width: 50%;
+    padding: 30px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 100px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 50px;
+}

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ServicesService } from '../services/services.service';
-import { Menu } from '../models/menu';
+import {  Product } from '../models/menu';
 import { NgModel } from '@angular/forms';
 @Component({
   selector: 'app-menu',
@@ -20,5 +20,8 @@ export class MenuComponent {
       console.log(this.menuArr)
     })
   }
-  menuArr:Menu[]=[];
+  menuArr:Product[]=[];
+  addToCart(){
+
+  }
 }

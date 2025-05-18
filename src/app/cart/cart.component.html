@@ -1,0 +1,29 @@
+
+<main>
+    <h1>Cart</h1>
+
+    <section>
+        <div class="card-container">
+            <h3>Your Basket</h3>
+            <div class="card" *ngFor="let menu of cartArr">
+                <img [src]="menu.product?.image" alt="">
+                <p>price: {{menu.price}}</p>
+                <p>Name: {{menu.product?.name}}</p>
+                <p>Spiciness:{{menu.product?.spiciness}}</p>
+                <p>Vegetarian:{{menu.product?.vegeterian}}</p>
+                <p>Product quantity:{{menu.quantity}}</p>
+                <button *ngIf="menu.product" (click)="getTheProduct(menu.product.id)">Buy</button>
+                <button (click)="deleteFromCart(menu.product?.id)">Delete</button>
+                
+                <div>
+                    <button (click)="increaseAmount(menu)">+</button>
+                    <button (click)="decreaseAmount(menu)">-</button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="total">
+            <h2>Total Price: {{getTotalPrice()}}</h2>
+        </div>
+    </section>
+</main>

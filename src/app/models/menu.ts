@@ -13,7 +13,7 @@
 //     };
 // }
 export class Product{
-    id?: number;
+    id!: number;
     name?: string;
     price?: number;
     nuts?: boolean;
@@ -22,3 +22,10 @@ export class Product{
     spiciness?: number;
     categoryId?: number;
 }
+export class Cart{
+    quantity?: number;
+    price?: number;
+    product?: Product = new Product();
+ 
+}
+

@@ -1,23 +1,16 @@
 .card-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     margin: 50px;
     padding: 50px;
     gap: 90px;
+    background-color: #333;
 }
-main {
+main{
     display: flex;
     justify-content: center;
-    background-image: url(https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?cs=srgb&dl=pexels-ella-olsson-572949-1640773.jpg&fm=jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px 20px;
-    flex-direction: column;
-    align-items: center;
 }
-
 
 .card {
     border: 1px solid #ddd;
@@ -62,41 +55,34 @@ main {
 .card button:hover {
     background-color: #0026ff54;
 }
-h1{
-    font-size: 3rem; 
-    color: #000000;
-    margin-bottom: 1rem;
+.total{
+    background-color: rgb(109, 109, 109);
+    max-width: 170px;
 }
-@media (max-width: 1200px) {
-    .card-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
-    }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
-        padding: 30px;
         gap: 40px;
+        padding: 30px;
+        margin: 30px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .card-container {
         grid-template-columns: 1fr;
+        gap: 20px;
         padding: 20px;
         margin: 20px;
-        gap: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
     }
 
     .card {
         width: 100%;
-    }
-
-    h1 {
-        font-size: 2rem;
-        text-align: center;
     }
 }
 

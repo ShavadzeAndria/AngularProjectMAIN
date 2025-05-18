@@ -1,14 +1,18 @@
 <main>
+    <section>
         <h1>Menu</h1>
-    <div class="card-container">
-        <div class="card" *ngFor="let menu of menuArr">
-            <img [src]="menu.image" alt="">
-                <p>price:{{menu.price}}</p>
-                <p>Name:{{menu.name}}</p>
-                <p>Spiciness:{{menu.spiciness}}</p>
-                <button (click)="addToCart()">Add To Cart</button>
+        <div class="card-container">
+            <div class="card" *ngFor="let menu of menuArr">
+                <img [src]="menu.image" alt="">
+                    <p>price:{{menu.price}}</p>
+                    <p>Name:{{menu.name}}</p>
+                    <p>Spiciness:{{menu.spiciness}}</p>
+                    <p>Vegetarian:{{menu.vegeterian}}</p>
+                    <button (click)="addToCart(menu)">Add To Cart</button>
+            
+            </div>
+    
         </div>
-
-    </div>
-   
+       
+    </section>
 </main>

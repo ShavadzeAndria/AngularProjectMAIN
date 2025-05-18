@@ -11,17 +11,44 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./menu.component.scss']
 
 })
-export class MenuComponent {
-  constructor(private http:ServicesService){}
-  ngOnInit(){
-    this.http.getMenu().subscribe(resp => {
-      console.log(resp)
-      this.menuArr = resp;
-      console.log(this.menuArr)
-    })
-  }
-  menuArr:Product[]=[];
-  addToCart(){
 
+export class MenuComponent {
+  menuArr: Product[] = []; 
+  cart: { productId: number; price: number | undefined; quantity: number }[] = [];
+
+  constructor(private http: ServicesService) {}
+
+  ngOnInit() {
+
+    this.http.getMenu().subscribe(resp => {
+      console.log(resp);
+      this.menuArr = resp;
+    });
+  }
+  addToCart(product: Product) {
+    const cartItem = {
+      productId: product.id, 
+      price: product.price,
+      quantity: 1 
+    };
+
+    const alreadyInCart = this.cart.some((item) => item.productId === product.id);
+    if (alreadyInCart) {
+      alert(`${product.name} უკვე არის კალათაში.`);
+      return;
+    } else {
+      this.cart.push(cartItem);
+    }
+
+    this.http.addToCart(cartItem).subscribe({
+      next: (response) => {
+        console.log('Product added to cart:', response);
+        alert(`${product.name} დაემატა კალათაში წარმატებით!`);
+      },
+      error: (error) => {
+        console.error('Error adding product to cart:', error);
+        alert('პროდუქტის დამატება ვერ მოხერხდა.');
+      }
+    });
   }
 }

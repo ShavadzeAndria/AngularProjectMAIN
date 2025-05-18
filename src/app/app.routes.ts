@@ -6,6 +6,11 @@ import { MenuComponent } from './menu/menu.component';
 
 
 export const routes: Routes = [
+      {
+         path: "",
+         redirectTo: "main",
+         pathMatch: "full"
+      },
      {
         path: "main",
         loadComponent: () => import('./main/main.component').then(m => m.MainComponent)
@@ -17,7 +22,11 @@ export const routes: Routes = [
     {
         path: "contact",
         loadComponent: () => import('./contact/contact.component').then(m => m.ContactComponent)
-    }
+    },
+   {
+      path: "cart",
+      loadComponent: () => import('./cart/cart.component').then(m => m.CartComponent)
+   }
 
 ];
  

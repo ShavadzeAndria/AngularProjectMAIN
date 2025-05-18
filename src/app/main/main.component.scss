@@ -1,29 +1,70 @@
-h2{
-    font-size: 2rem;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 3rem; 
     color: #ffd6d6;
     margin-bottom: 1rem;
 }
-p{
-    font-size: 23px;
+
+p {
+    font-size: 26px;
     color: #ffffff;
     margin-bottom: 20px;
-    max-width: 500px;
-
+    max-width: 700px;
 }
-section{
+
+section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-image:url(https://media.cntraveler.com/photos/66668a4b352fb7400e650b24/16:9/w_2560%2Cc_limit/Belly%2520of%2520the%2520beast%2520menu%2520August%25202023%2520-%2520Claire%2520Gunn%2520Photo.jpg) ;
+    padding: 60px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    background-image: url(https://media.cntraveler.com/photos/66668a4b352fb7400e650b24/16:9/w_2560%2Cc_limit/Belly%2520of%2520the%2520beast%2520menu%2520August%25202023%2520-%2520Claire%2520Gunn%2520Photo.jpg);
 }
-.dv1{
+
+.dv1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border: none;
+}
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 90%;
+        margin-bottom: 15px;
+    }
+
+
+    section {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .dv1 {
+        padding: 20px;
+        width: 100%;
+    }
 }

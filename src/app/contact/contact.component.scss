@@ -1,6 +1,6 @@
 .sec1{
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;    
 }
 .text{
     max-width: 50%;
@@ -10,9 +10,9 @@
     text-align: center;
 }
 p{
-    font-size: 20px;
+    font-size: 28px;
     line-height: 1.5;
-    color: #333;
+    color: #000000;;
 }
 .img{
     max-width: 50%;
@@ -25,5 +25,39 @@ img{
     border-radius: 100px;
     margin: 0 auto;
     padding: 30px;
-    margin-top: 50px;
+    margin-top: 70px;
+} 
+
+@media (max-width: 769px) {
+    .sec1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .text, .img {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .text p {
+        font-size: 18px;
+    }
+
+    .img img {
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .img img {
+        width: 100%;
+    }
 }
